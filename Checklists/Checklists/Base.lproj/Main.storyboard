@@ -25,12 +25,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name of the Item" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YLM-cW-nht">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name of the Item" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="YLM-cW-nht">
                                                     <rect key="frame" x="16" y="4" width="343" height="34.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                     <connections>
                                                         <action selector="done" destination="h8e-sE-4Xw" eventType="editingDidEndOnExit" id="ikQ-Je-Ql2"/>
+                                                        <outlet property="delegate" destination="h8e-sE-4Xw" id="tam-5n-cy1"/>
                                                     </connections>
                                                 </textField>
                                             </subviews>
@@ -56,13 +57,14 @@
                                 <action selector="cancel" destination="h8e-sE-4Xw" id="jX9-r9-Yov"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="LTV-ao-bGv">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="done" id="LTV-ao-bGv">
                             <connections>
                                 <action selector="done" destination="h8e-sE-4Xw" id="L2p-8v-6Io"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="doneBarButton" destination="LTV-ao-bGv" id="lzn-cD-usc"/>
                         <outlet property="textField" destination="YLM-cW-nht" id="mtX-Nj-d5j"/>
                     </connections>
                 </tableViewController>
