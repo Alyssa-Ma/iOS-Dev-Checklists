@@ -8,7 +8,8 @@
 import UIKit
 
 class AddItemViewController: UITableViewController {
-
+    @IBOutlet weak var textField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .never
@@ -20,6 +21,8 @@ class AddItemViewController: UITableViewController {
     }
     
     @IBAction func done() {
+        print("Contents of the text field: \(textField.text!)")
+        
         navigationController?.popViewController(animated: true)
     }
     
@@ -29,5 +32,11 @@ class AddItemViewController: UITableViewController {
         willSelectRowAt indexPath: IndexPath
     ) -> IndexPath? {
         return nil
+    }
+    
+    //keyboard auto opens upon going to add item
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        textField.becomeFirstResponder()
     }
 }
