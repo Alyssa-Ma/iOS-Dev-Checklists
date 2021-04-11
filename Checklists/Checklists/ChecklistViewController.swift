@@ -33,6 +33,8 @@ class ChecklistViewController: UITableViewController {
         let item5 = ChecklistItem()
         item5.text = "Ice Cream"
         items.append(item5)
+        
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 
     // MARK: - Table View Data Source
@@ -86,6 +88,22 @@ class ChecklistViewController: UITableViewController {
         with item: ChecklistItem){
         let label = cell.viewWithTag(1000) as! UILabel
         label.text = item.text
+    }
+    
+    // MARK: - Actions
+    @IBAction func addItem() {
+        let newRowIndex = items.count
+        
+        //create new checklist item
+        let item = ChecklistItem()
+        item.text = "I am a new row"
+        //add to data model
+        items.append(item)
+        
+        let indexPath = IndexPath(row: newRowIndex, section: 0)
+        let indexPaths = [indexPath]
+        //insert new row for obj in table view
+        tableView.insertRows(at: indexPaths, with: .automatic)
     }
 }
 
