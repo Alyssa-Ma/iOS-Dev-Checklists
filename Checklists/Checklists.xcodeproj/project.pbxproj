@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A03337F262299BB00FC29AE /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A03337E262299BB00FC29AE /* AddItemViewController.swift */; };
 		2A124A542622363E0039BC95 /* ChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A124A532622363E0039BC95 /* ChecklistItem.swift */; };
 		2A658870261E60C8004F2407 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A65886F261E60C8004F2407 /* AppDelegate.swift */; };
 		2A658872261E60C8004F2407 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A658871261E60C8004F2407 /* SceneDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A03337E262299BB00FC29AE /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		2A124A532622363E0039BC95 /* ChecklistItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistItem.swift; sourceTree = "<group>"; };
 		2A65886C261E60C8004F2407 /* Checklists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Checklists.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A65886F261E60C8004F2407 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				2A65887A261E60C9004F2407 /* LaunchScreen.storyboard */,
 				2A65887D261E60C9004F2407 /* Info.plist */,
 				2A124A532622363E0039BC95 /* ChecklistItem.swift */,
+				2A03337E262299BB00FC29AE /* AddItemViewController.swift */,
 			);
 			path = Checklists;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A03337F262299BB00FC29AE /* AddItemViewController.swift in Sources */,
 				2A658874261E60C8004F2407 /* ChecklistViewController.swift in Sources */,
 				2A658870261E60C8004F2407 /* AppDelegate.swift in Sources */,
 				2A658872261E60C8004F2407 /* SceneDelegate.swift in Sources */,
