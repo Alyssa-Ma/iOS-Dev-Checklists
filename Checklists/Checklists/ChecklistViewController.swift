@@ -50,17 +50,6 @@ class ChecklistViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
-    // MARK: - Checkmark Configuration
-    func configureCheckmark(
-        for cell: UITableViewCell,
-        with item: ChecklistItem){
-        
-        if item.checked {
-            cell.accessoryType = .checkmark
-        } else {
-            cell.accessoryType = .none
-        }
-    }
     override func tableView(
         _ tableView: UITableView,
         numberOfRowsInSection section: Int
@@ -81,6 +70,31 @@ class ChecklistViewController: UITableViewController {
         configureText(for: cell, with: item)
         configureCheckmark(for: cell, with: item)
         return cell
+    }
+    
+    override func tableView (
+        _ tableView: UITableView,
+        commit editingStlye: UITableViewCell.EditingStyle,
+        forRowAt indexPath: IndexPath
+    ) {
+        //1
+        items.remove(at: indexPath.row)
+        
+        //2
+        let indexPaths = [indexPath]
+        tableView.deleteRows(at: indexPaths, with: .automatic)
+    }
+    
+    // MARK: - Checkmark Configuration
+    func configureCheckmark(
+        for cell: UITableViewCell,
+        with item: ChecklistItem){
+        
+        if item.checked {
+            cell.accessoryType = .checkmark
+        } else {
+            cell.accessoryType = .none
+        }
     }
     
     func configureText(
