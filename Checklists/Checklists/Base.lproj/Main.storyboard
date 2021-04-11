@@ -24,6 +24,19 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iHf-lH-yCk" id="69h-je-Syf">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YLM-cW-nht">
+                                                    <rect key="frame" x="16" y="4" width="343" height="34.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="YLM-cW-nht" secondAttribute="trailing" constant="16" id="4ba-V1-bpY"/>
+                                                <constraint firstAttribute="bottom" secondItem="YLM-cW-nht" secondAttribute="bottom" constant="5.5" id="7Xz-wM-pyR"/>
+                                                <constraint firstItem="YLM-cW-nht" firstAttribute="leading" secondItem="69h-je-Syf" secondAttribute="leading" constant="16" id="GOq-FT-8Oc"/>
+                                                <constraint firstItem="YLM-cW-nht" firstAttribute="top" secondItem="69h-je-Syf" secondAttribute="top" constant="4" id="ZUL-ln-WN2"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -49,7 +62,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aX8-Ak-y0v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1238" y="-47"/>
+            <point key="canvasLocation" x="1237.5999999999999" y="-47.226386806596707"/>
         </scene>
         <!--Checklists-->
         <scene sceneID="jhD-fg-Kf8">
