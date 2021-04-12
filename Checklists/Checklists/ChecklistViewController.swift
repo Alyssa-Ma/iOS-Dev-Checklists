@@ -14,7 +14,15 @@ class ChecklistViewController: UITableViewController, AddItemViewControllerDeleg
         navigationController?.popViewController(animated: true)
     }
     
+    //add item to to-do list
     func addItemViewController(_ controller: AddItemViewController, didFinishAdding item: ChecklistItem) {
+        //insert obj into items array
+        let newRowIndex = items.count
+        items.append(item)
+        
+        let indexPath = IndexPath(row: newRowIndex, section: 0)
+        let indexPaths = [indexPath]
+        tableView.insertRows(at: indexPaths, with: .automatic)
         navigationController?.popViewController(animated: true)
     }
     
@@ -115,20 +123,6 @@ class ChecklistViewController: UITableViewController, AddItemViewControllerDeleg
     }
     
     // MARK: - Actions
-    @IBAction func addItem() {
-        let newRowIndex = items.count
-        
-        //create new checklist item
-        let item = ChecklistItem()
-        item.text = "I am a new row"
-        //add to data model
-        items.append(item)
-        
-        let indexPath = IndexPath(row: newRowIndex, section: 0)
-        let indexPaths = [indexPath]
-        //insert new row for obj in table view
-        tableView.insertRows(at: indexPaths, with: .automatic)
-    }
     
     // MARK: - Navigation
     //checklistviewcontroller is delegate of additemviewcontroller
